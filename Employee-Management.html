@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #005bb5;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
+main h2 {
+    color: #005bb5;
+    border-bottom: 2px solid #005bb5;
+    padding-bottom: 0.5rem;
+}
+
+form {
+    margin-top: 1rem;
+    line-height: 2;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #0073e6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+}
+
+footer {
+    text-align: center;
+    background-color: #005bb5;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Employee Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#finance">Finance</a></li>
+            <li><a href="#departments">Departments</a></li>
+            <li><a href="#procurement">Procurement</a></li>
+            <li><a href="#leave">Leave</a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <section id="registration">
+            <h2>Registration</h2>
+            <p>Register new employees with personal, professional, and contact details.</p>
+            <form>
+                <label for="emp-name">Full Name:</label>
+                <input type="text" id="emp-name" name="emp-name" placeholder="Enter full name" required>
+                <br>
+                <label for="emp-id">Employee ID:</label>
+                <input type="text" id="emp-id" name="emp-id" placeholder="Enter employee ID" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+                <br>
+                <label for="department">Department:</label>
+                <select id="department" name="department" required>
+                    <option value="hr">HR</option>
+                    <option value="finance">Finance</option>
+                    <option value="it">IT</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+                <br>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        <section id="login">
+            <h2>Login</h2>
+            <p>Access the system securely with your credentials.</p>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <br>
+                <label>
+                    <input type="checkbox" name="remember-me"> Remember Me
+                </label>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <p><a href="#">Forgot password?</a></p>
+        </section>
+        <section id="finance">
+            <h2>Finance</h2>
+            <p>Manage employee payroll, bonuses, and financial records.</p>
+            <ul>
+                <li>View and update salary details.</li>
+                <li>Generate pay slips for employees.</li>
+                <li>Monitor tax deductions and contributions.</li>
+            </ul>
+            <button>Go to Finance Dashboard</button>
+        </section>
+        <section id="departments">
+            <h2>Departments</h2>
+            <p>Organize and manage departmental data effectively.</p>
+            <ul>
+                <li>View list of all departments.</li>
+                <li>Assign employees to specific departments.</li>
+                <li>Create or dissolve departments.</li>
+            </ul>
+            <button>Manage Departments</button>
+        </section>
+        <section id="procurement">
+            <h2>Procurement</h2>
+            <p>Handle procurement requests and monitor inventory levels.</p>
+            <ul>
+                <li>Submit new procurement requests.</li>
+                <li>Track procurement approval status.</li>
+                <li>Update inventory records.</li>
+            </ul>
+            <button>Procurement Dashboard</button>
+        </section>
+        <section id="leave">
+            <h2>Leave</h2>
+            <p>Manage employee leave applications and schedules.</p>
+            <ul>
+                <li>Apply for leave.</li>
+                <li>Track leave balances and status.</li>
+                <li>Approve or decline leave requests.</li>
+            </ul>
+            <button>Leave Management</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Employee Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
